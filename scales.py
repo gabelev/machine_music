@@ -1,10 +1,12 @@
 import mingus.core.scales as scales
 
 
-SCALE_NAMES = ["Diatonic", "Ionian", "Dorian", "Phrygian", "Lydian",
-               "Mixolydian", "Aeolian", "Locrian", "Major", "HarmonicMajor",
-               "NaturalMinor", "HarmonicMinor", "MelodicMinor", "Bachian",
-               "MinorNeapolitan", "Chromatic", "WholeTone", "Octatonic"]
+SCALE_NAMES = (
+    "Diatonic", "Ionian", "Dorian", "Phrygian", "Lydian",
+    "Mixolydian", "Aeolian", "Locrian", "Major", "HarmonicMajor",
+    "NaturalMinor", "HarmonicMinor", "MelodicMinor", "Bachian",
+    "MinorNeapolitan", "Chromatic", "WholeTone", "Octatonic"
+)
 
 
 class TonalScale(object):
@@ -18,7 +20,7 @@ class TonalScale(object):
 
     def select_scale(self, name, base_note):
         if not isinstance(base_note, str):
-            return TypeError
+            return TypeError("Scale Name incorrect.")
         if name == "Diatonic":
             return self.scales.Diatonic(base_note, (0, 7))
         if name == "Ionian":

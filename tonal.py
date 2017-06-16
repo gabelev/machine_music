@@ -5,10 +5,8 @@ from scales import SCALE_NAMES, TonalScale
 
 
 TS = TonalScale()
-
 NOTES_MAP = dict(C=0, D=2, E=4, F=5, G=7, A=9, B=11)
-
-BASE_SCALE = ['C', 'D', 'E', 'F', 'G', 'A', 'B']
+BASE_SCALE = ('C', 'D', 'E', 'F', 'G', 'A', 'B')
 
 
 class Tonal(object):
