@@ -1,7 +1,7 @@
 # Machine Music
 
 Machine Music is a small collection of scripts and code that transforms time-series data streams into compositional elements
-and understandable sonic components. It was the basis for a talk I gave at [PyGotham 2016](https://2016.pygotham.org/talks/311/the-sound-of-data-using-p/) at the UN in NYC.
+and understandable sonic components. It was the basis for a talk I gave at [PyGotham 2016](https://2016.pygotham.org/talks/311/the-sound-of-data-using-p/) at the [UN](https://www.youtube.com/watch?v=vb9c_WFMYeI) in NYC.
 
 In it's current state, Machine Music queries a weather api for the following points of data:
 
