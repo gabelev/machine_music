@@ -12,10 +12,13 @@ def convert_hex_file(infile, outfile):
     for line in infile:
         line_num += 1
         try:
-            track.append(mido.Message.from_hex(line))
+            msg = (mido.Message.from_hex(line.rstrip('\n')))
+            msg.time = 64
+            track.append(msg)
         except ValueError:
             # We don't want to stop when our ML algo makes nonsense
             errors += 1
+            # print e.message
             continue
 
     # G-d save the queen
