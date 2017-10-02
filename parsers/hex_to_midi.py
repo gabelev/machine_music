@@ -52,6 +52,8 @@ def convert_hex_file_with_time(infile, outfile):
     midi_file.save(outfile)
 
     print("Done!\nOut of {} messages, there were {} errors".format(line_num, errors))
+
+
 if __name__ == "__main__":
     with open(sys.argv[1], 'r') as infile:
         outfile = sys.argv[2]
@@ -59,3 +61,4 @@ if __name__ == "__main__":
             convert_hex_file_with_time(infile, outfile)
         else:
             convert_hex_file(infile, outfile)
+
