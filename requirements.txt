@@ -2,6 +2,7 @@ datadog==0.12.0
 decorator==4.0.10
 mido==1.2.8
 mingus==0.5.1
+music21==4.1.0
 py==1.4.31
 pytest==2.9.2
 requests==2.10.0
