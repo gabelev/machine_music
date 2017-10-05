@@ -5,18 +5,17 @@ from mido import MidiFile
 
 
 def parse_single_midi_file_with_time(infile, outfile):
-    score = music21.converter.parse(infile)
-    key = score.analyze("key")
-
     try:
+        score = music21.converter.parse(infile)
+        key = score.analyze("key")
         for msg in MidiFile(infile):
             if msg.time != 0:
                 outfile.write(str(msg.hex()) + "," + str(key) +  "," + str(msg.time) + '\n')
             else:
                 outfile.write(str(msg.hex()) + "," + str(key) + '\n')
         outfile.write("\n")
-    except IOError as e:
-        print(e.message)
+    except Exception as e:
+        print(e)
         pass
 
 
@@ -31,5 +30,5 @@ if __name__ == "__main__":
                 print(num_files)
                 num_files += 1
             except Exception as e:
-                print e.message
+                print(e)
                 continue
