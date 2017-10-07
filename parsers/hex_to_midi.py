@@ -66,13 +66,13 @@ def convert_hex_file_with_key(infile, outfile):
         try:
             hex_str = line.rstrip("\n").split(",")
             msg = (mido.Message.from_hex(hex_str[0]))
-            if len(hex_str) > 1:
+            if len(hex_str) == 3:
                 msg.time = int(float(hex_str[2]) * 1000)
             track.append(msg)
-        except ValueError:
+        except Exception as e:
             # We don't want to stop when our ML algo makes nonsense
             errors += 1
-            # print e.message
+            print(e)
             continue
 
     # G-d save the queen
@@ -88,7 +88,7 @@ if __name__ == "__main__":
         if sys.argv[3] == "time":
             convert_hex_file_with_time(infile, outfile)
         if sys.argv[3] == "key":
-            convert_hex_file_with_time(infile, outfile)
+            convert_hex_file_with_key(infile, outfile)
         else:
             convert_hex_file(infile, outfile)
 

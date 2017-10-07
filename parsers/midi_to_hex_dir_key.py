@@ -10,14 +10,18 @@ def parse_single_midi_file_with_time(infile, outfile):
         key = score.analyze("key")
         for msg in MidiFile(infile):
             if msg.time != 0:
-                outfile.write(str(msg.hex()) + "," + str(key) +  "," + str(msg.time) + '\n')
+                outfile.write(
+                    str(msg.hex()) + "," +
+                    str(key) + "," + str(msg.time) + '\n'
+                )
             else:
-                outfile.write(str(msg.hex()) + "," + str(key) + '\n')
+                outfile.write(
+                    str(msg.hex()) + "," + str(key) + '\n'
+                )
         outfile.write("\n")
     except Exception as e:
         print(e)
         pass
-
 
 
 if __name__ == "__main__":
@@ -26,7 +30,9 @@ if __name__ == "__main__":
         directory = sys.argv[1]
         for filename in os.listdir(directory):
             try:
-                parse_single_midi_file_with_time(directory + "/" + filename, outfile)
+                parse_single_midi_file_with_time(
+                    directory + "/" + filename, outfile
+                )
                 print(num_files)
                 num_files += 1
             except Exception as e:
