@@ -2,6 +2,10 @@
 
 Machine Music 
 
+# Machine Music v2
+
+RNN's to generate music.
+
 # Machine Music v1
 
 Machine Music is a small collection of scripts and code that transforms time-series data streams into compositional elements
