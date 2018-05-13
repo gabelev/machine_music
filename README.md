@@ -2,11 +2,11 @@
 
 Machine Music 
 
-# Machine Music v2
+## Machine Music v2
 
-RNN's to generate music.
+RNN's to generate music. Training a model so that it can generate things. 
 
-# Machine Music v1
+## Machine Music v1
 
 Machine Music is a small collection of scripts and code that transforms time-series data streams into compositional elements
 and understandable sonic components. It was the basis for a talk I gave at [PyGotham 2016](https://2016.pygotham.org/talks/311/the-sound-of-data-using-p/) at the [UN](https://www.youtube.com/watch?v=vb9c_WFMYeI) in NYC.
