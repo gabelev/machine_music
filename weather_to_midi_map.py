@@ -5,7 +5,7 @@ from datadog import statsd
 
 from tonal import Tonal, mapping
 
-API_KEY = "ADD_PI_KEY_HERE"
+API_KEY = "3029dd3b274c8f534b16d89a14db6118"
 GEO = "40.712784,-74.005941"
 call = "https://api.forecast.io/forecast/{0}/{1}"
 
