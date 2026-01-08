@@ -1,9 +1,8 @@
-datadog==0.12.0
-decorator==4.0.10
-mido==1.2.8
-mingus==0.5.1
-music21==4.1.0
-py==1.4.31
-pytest==2.9.2
-requests==2.10.0
-simplejson==3.8.2
+datadog==0.50.1
+decorator==5.1.1
+mido==1.3.3
+mingus==0.6.1
+music21==9.1.0
+pytest==8.3.4
+requests==2.32.3
+simplejson==3.19.3

@@ -55,7 +55,7 @@ while True:
     data = get_info()
     for item in data:
         parse(item)
-        for key, value in values.iteritems():
+        for key, value in values.items():
             chan = chans.get(key)
             try:
                 output.send(mido.Message(
@@ -64,13 +64,13 @@ while True:
                     velocity=50,
                     channel=chan))
             except Exception as e:
-                print("Error: {}".format(e.message))
+                print("Error: {}".format(e))
             time.sleep(1)
             print(key, value, "note on", chan)
             statsd.gauge(key, value)
     for item in data:
         parse(item)
-        for key, value in values.iteritems():
+        for key, value in values.items():
             chan = chans.get(key)
             output.send(mido.Message(
                 'note_off',

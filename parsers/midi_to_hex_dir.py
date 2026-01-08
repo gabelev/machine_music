@@ -12,7 +12,7 @@ def parse_single_midi_file_with_time(infile, outfile):
                 outfile.write(str(msg.hex()) + '\n')
         outfile.write("\n")
     except IOError as e:
-        print(e.message)
+        print(e)
         pass
 
 
@@ -27,5 +27,5 @@ if __name__ == "__main__":
                 print(num_files)
                 num_files += 1
             except Exception as e:
-                print e.message
+                print(e)
                 continue
